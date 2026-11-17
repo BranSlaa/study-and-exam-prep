@@ -54,7 +54,6 @@ export type TimelineItem = Pick<
 
 export type ClosingData = {
 	title: string;
-	body: string;
 	sourcesTitle: string;
 	sources: readonly ResourceLink[];
 	note: string;
