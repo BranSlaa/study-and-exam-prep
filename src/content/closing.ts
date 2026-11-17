@@ -1,8 +1,7 @@
 import type { ClosingData } from "@/types/content";
 
 export const closing = {
-	title: "Your next study session",
-	body: "Choose one topic. Recall what you know. Check your understanding. Plan when to return.",
+	title: "I would say good luck on your exam, but with this guide, I know you'll be ready.",
 	sourcesTitle: "Sources and further reading",
 	sources: [
 		{

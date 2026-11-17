@@ -47,6 +47,11 @@ export type SectionData = {
 	takeaway: string;
 };
 
+export type TimelineItem = Pick<
+	SectionData,
+	"number" | "stage" | "title"
+>;
+
 export type ClosingData = {
 	title: string;
 	body: string;

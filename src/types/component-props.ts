@@ -4,6 +4,7 @@ import type {
 	ClosingData,
 	SectionData,
 	StageId,
+	TimelineItem,
 } from "./content";
 
 export type SectionProps = {
@@ -13,6 +14,10 @@ export type SectionProps = {
 export type BlockProps = {
 	block: ContentBlock;
 	fullWidth?: boolean;
+};
+
+export type TimelineProps = {
+	sections: readonly TimelineItem[];
 };
 
 export type TableProps = {

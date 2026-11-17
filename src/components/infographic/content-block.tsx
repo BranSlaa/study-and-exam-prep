@@ -1,19 +1,17 @@
 import { CircleDot, ExternalLink } from "lucide-react";
 import type { BlockProps } from "@/types/component-props";
-import { isWideBlock } from "@/utils/is-wide-block";
 import { CurveChart } from "./curve-chart";
 import { DataTable } from "./data-table";
 import { MemoryDiagram } from "./memory-diagram";
 
 export function ContentBlock({ block, fullWidth }: BlockProps) {
 	const List = block.ordered ? "ol" : "ul";
-	const isWide = fullWidth || isWideBlock(block);
 
 	return (
 		<section
 			className={`rounded-lg border border-current/15 p-4 text-lg ${
 				block.featured ? "bg-white/75" : "bg-white/45"
-			} ${isWide ? "lg:col-span-2" : ""}`}
+			} ${fullWidth ? "lg:col-span-2" : ""}`}
 		>
 			<div className="flex gap-3">
 				<span

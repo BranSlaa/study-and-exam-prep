@@ -20,15 +20,15 @@ export const section04 = {
 			title: "My three-pass approach to the whole textbook",
 			passes: [
 				{
-					title: "Pass 1 — Map the structure",
+					title: "Pass 1 — Map the structure:",
 					body: "Go through the whole textbook and preview the headings, major titles, and chapter organization. Notice the sequence of topics and how the book is arranged.",
 				},
 				{
-					title: "Pass 2 — Explore the supporting material",
+					title: "Pass 2 — Explore the supporting material:",
 					body: "Go through the whole textbook again, focusing on images, captions, definitions, tables, examples, summaries, and other supplementary content. Use these features to build an overview before the full reading.",
 				},
 				{
-					title: "Pass 3 — Read cover to cover",
+					title: "Pass 3 — Read cover to cover:",
 					body: "Read the whole textbook, including the main text, from beginning to end. Work through it in manageable sections across the course. Pause to explain what you have read, then check anything you could not recall or explain.",
 				},
 			],

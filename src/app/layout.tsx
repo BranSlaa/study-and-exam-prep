@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import "./infographic.css";
+import "./timeline.css";
 import "./table.css";
 import "./memory-diagram.css";
 import "./memory-diagram-nodes.css";

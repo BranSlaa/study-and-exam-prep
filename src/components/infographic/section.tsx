@@ -1,5 +1,8 @@
 import type { SectionProps } from "@/types/component-props";
-import { getUnpairedBlockIndexes } from "@/utils/is-wide-block";
+import {
+	getUnpairedBlockIndexes,
+	isWideBlock,
+} from "@/utils/is-wide-block";
 import { accentClasses } from "@/utils/stage-classes";
 import { ContentBlock } from "./content-block";
 import { Takeaway } from "./takeaway";
@@ -12,7 +15,10 @@ export function InfographicSection({ data }: SectionProps) {
 			: getUnpairedBlockIndexes(data.blocks);
 
 	return (
-		<article className="infographic-section px-5 py-10 md:px-8 md:py-12 lg:py-14">
+		<article
+			className="infographic-section scroll-mt-20 px-5 py-10 md:px-8 md:py-12 lg:py-14"
+			id={`section-${data.number}`}
+		>
 			<header className="section-intro">
 				{data.stageLabel && (
 					<p className="mb-6 text-sm font-bold tracking-widest uppercase">
@@ -45,7 +51,11 @@ export function InfographicSection({ data }: SectionProps) {
 					{data.blocks.map((block, index) => (
 						<ContentBlock
 							block={block}
-							fullWidth={unpairedBlockIndexes.has(index)}
+							fullWidth={
+								data.layout !== "sequence" &&
+								(isWideBlock(block) ||
+									unpairedBlockIndexes.has(index))
+							}
 							key={block.title}
 						/>
 					))}
