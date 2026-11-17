@@ -1,0 +1,59 @@
+.memory-box {
+	align-self: center;
+	border-top: 4px solid hsl(201 57% 48%);
+	font-weight: 700;
+	max-width: 24rem;
+	padding: 1.25rem 0.75rem;
+	width: 100%;
+}
+
+.memory-sensory {
+	background: hsl(240 45% 91%);
+}
+
+.memory-working {
+	background: hsl(19 75% 87%);
+	border-color: hsl(201 57% 48%);
+}
+
+.memory-rehearsal {
+	display: flex;
+	font-size: 0.75rem;
+	font-weight: 500;
+	justify-content: center;
+	margin-bottom: 0.75rem;
+}
+
+.memory-rehearsal svg {
+	flex: none;
+	margin-right: 0.25rem;
+}
+
+.memory-retrieval {
+	display: grid;
+	gap: 0.5rem;
+	grid-template-columns: 1fr 1fr;
+	margin-inline: auto;
+	max-width: 24rem;
+	padding-block: 0.75rem;
+	width: 100%;
+}
+
+.memory-retrieval span {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	font-size: 0.9rem;
+	gap: 0.25rem;
+	justify-content: center;
+}
+
+.memory-retrieval svg {
+	height: 2.25rem;
+	width: 2.25rem;
+}
+
+.memory-long-term {
+	background: hsl(45 76% 85%);
+	border-color: hsl(201 57% 48%);
+}

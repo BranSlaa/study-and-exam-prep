@@ -1,0 +1,95 @@
+.infographic-section {
+	display: grid;
+	grid-template-areas: "intro path content";
+	grid-template-columns: minmax(0, 3fr) 5rem minmax(0, 7fr);
+	margin-inline: auto;
+	max-width: 72rem;
+}
+
+.section-intro {
+	grid-area: intro;
+	padding-right: 1.5rem;
+}
+
+.section-path {
+	align-self: stretch;
+	grid-area: path;
+	min-height: 100%;
+	position: relative;
+}
+
+.section-path::before {
+	background: currentColor;
+	bottom: -4rem;
+	content: "";
+	left: calc(50% - 1px);
+	position: absolute;
+	top: -4rem;
+	width: 2px;
+}
+
+.section-path::after {
+	background: currentColor;
+	content: "";
+	height: 2px;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 1.5rem;
+}
+
+.section-marker {
+	align-items: center;
+	border: 3px solid white;
+	border-radius: 9999px;
+	color: white;
+	display: flex;
+	font-size: 0.875rem;
+	font-weight: 800;
+	height: 3rem;
+	justify-content: center;
+	left: 50%;
+	position: absolute;
+	top: 0;
+	transform: translateX(-50%);
+	width: 3rem;
+	z-index: 1;
+}
+
+.section-content {
+	grid-area: content;
+	min-width: 0;
+}
+
+.bg-stage-3 > .infographic-section:last-child .section-path::before {
+	bottom: 0;
+}
+
+@media (max-width: 799px) {
+	.infographic-section {
+		column-gap: 1rem;
+		grid-template-areas:
+			"path intro"
+			"path content";
+		grid-template-columns: 2.75rem minmax(0, 1fr);
+		row-gap: 2rem;
+	}
+
+	.section-intro {
+		padding-right: 0;
+	}
+
+	.section-path::before {
+		bottom: -3rem;
+		top: -3rem;
+	}
+
+	.section-path::after {
+		left: 50%;
+		right: -1rem;
+	}
+
+	.section-marker {
+		left: 50%;
+	}
+}

@@ -1,0 +1,120 @@
+.memory-model {
+	color: var(--foreground);
+	display: grid;
+	grid-template-columns: minmax(0, 24rem) minmax(12rem, 13rem);
+	justify-content: center;
+	margin-inline: auto;
+	padding: 1.5rem;
+}
+
+.memory-main {
+	display: contents;
+}
+
+.memory-main > * {
+	grid-column: 1;
+}
+
+.memory-main > :nth-child(1) {
+	grid-row: 1;
+}
+
+.memory-main > :nth-child(2) {
+	grid-row: 2;
+}
+
+.memory-main > :nth-child(3) {
+	grid-row: 3;
+}
+
+.memory-main > :nth-child(4) {
+	grid-row: 4;
+}
+
+.memory-main > :nth-child(5) {
+	grid-row: 5;
+}
+
+.memory-main > :nth-child(6) {
+	grid-row: 6;
+}
+
+.memory-main > :nth-child(7) {
+	grid-row: 7;
+}
+
+.memory-event,
+.memory-connector,
+.memory-box {
+	text-align: center;
+}
+
+.memory-event {
+	padding: 0.75rem;
+}
+
+.memory-connector {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	font-size: 0.9rem;
+	padding: 0.5rem;
+}
+
+.memory-connector svg {
+	height: 2.25rem;
+	width: 2.25rem;
+}
+
+.memory-automatic {
+	grid-column: 2;
+	grid-row: 3 / 8;
+	margin-block: 2rem;
+	position: relative;
+}
+
+.memory-automatic::before {
+	border-block: 2px solid currentColor;
+	border-right: 2px solid currentColor;
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 2.75rem;
+	top: 0;
+}
+
+.memory-automatic span {
+	font-size: 0.9rem;
+	font-weight: 600;
+	left: 0.75rem;
+	position: absolute;
+	top: 1.25rem;
+	white-space: nowrap;
+}
+
+.memory-automatic svg {
+	height: 2.75rem;
+	left: -0.75rem;
+	position: absolute;
+	bottom: -1.375rem;
+	width: 2.75rem;
+}
+
+@media (max-width: 639px) {
+	.memory-model {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.memory-main > * {
+		grid-column: 1;
+		grid-row: auto;
+	}
+
+	.memory-automatic {
+		grid-column: 1;
+		grid-row: auto;
+		margin-block: 1rem;
+		min-height: 10rem;
+	}
+}

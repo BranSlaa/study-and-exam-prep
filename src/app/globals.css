@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: hsl(168 28% 97%);
+	--foreground: hsl(176 38% 13%);
+	--stage-1: hsl(168 30% 96%);
+	--stage-1-panel: hsl(168 32% 90%);
+	--stage-1-accent: hsl(171 38% 33%);
+	--stage-2: hsl(168 36% 93%);
+	--stage-2-panel: hsl(168 37% 85%);
+	--stage-2-accent: hsl(171 54% 27%);
+	--stage-3: hsl(168 42% 89%);
+	--stage-3-panel: hsl(168 40% 80%);
+	--stage-3-accent: hsl(171 84% 20%);
+	--highlight: hsl(42 66% 42%);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-stage-1: var(--stage-1);
+	--color-stage-1-panel: var(--stage-1-panel);
+	--color-stage-1-accent: var(--stage-1-accent);
+	--color-stage-2: var(--stage-2);
+	--color-stage-2-panel: var(--stage-2-panel);
+	--color-stage-2-accent: var(--stage-2-accent);
+	--color-stage-3: var(--stage-3);
+	--color-stage-3-panel: var(--stage-3-panel);
+	--color-stage-3-accent: var(--stage-3-accent);
+	--color-highlight: var(--highlight);
+	--font-sans: var(--font-geist-sans);
+	--font-serif: var(--font-libre-baskerville);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-geist-sans), sans-serif;
+}
+
+::selection {
+	background: var(--stage-3-panel);
+}
+
+:focus-visible {
+	outline: 3px solid var(--highlight);
+	outline-offset: 3px;
 }
