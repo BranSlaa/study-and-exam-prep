@@ -14,7 +14,7 @@ export const section09 = {
 			kind: "checklist",
 			items: [
 				"Protect time for sleep.",
-				"Confirm the date, start time, location, or online platform.",
+				"Confirm the date, start time, location, or online platform. If needed, you can have a trusted friend or family member check your preparations aswell.",
 				"Prepare identification and permitted materials.",
 				"Check travel or technology arrangements.",
 			],
