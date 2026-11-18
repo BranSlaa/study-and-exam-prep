@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import type { StaticImageData } from "next/image";
 
 export type StageId = "one" | "two" | "three";
 
@@ -6,6 +7,7 @@ export type ContentTable = {
 	label: string;
 	columns: readonly string[];
 	rows: readonly (readonly string[])[];
+	dontBold?: boolean;
 };
 
 export type PassItem = {
@@ -19,6 +21,23 @@ export type ResourceLink = {
 	description: string;
 };
 
+export type TaskExample = {
+	label: string;
+	prompt: string;
+};
+
+export type ContentGroup = {
+	title: string;
+	body?: string;
+	items?: readonly string[];
+};
+
+export type ContentImage = {
+	src: StaticImageData;
+	alt: string;
+	caption?: string;
+};
+
 export type ContentBlock = {
 	title: string;
 	paragraphs?: readonly string[];
@@ -27,12 +46,27 @@ export type ContentBlock = {
 	ordered?: boolean;
 	table?: ContentTable;
 	passes?: readonly PassItem[];
+	stepStyle?: "ordered" | "techniques";
 	links?: readonly ResourceLink[];
 	quote?: string;
-	visual?: "curve" | "memory";
+	visual?: "curve" | "memory" | "time-budget";
 	caption?: string;
 	note?: string;
 	featured?: boolean;
+	isFull?: boolean;
+	kind?:
+		| "example"
+		| "checklist"
+		| "reference"
+		| "reminder"
+		| "process"
+		| "prompt";
+	taskExamples?: readonly TaskExample[];
+	groups?: readonly ContentGroup[];
+	groupLayout?: "compare" | "branch" | "tools";
+	image?: ContentImage;
+	centerTitle?: boolean;
+	icon?: boolean;
 };
 
 export type SectionData = {
@@ -40,17 +74,15 @@ export type SectionData = {
 	stage: StageId;
 	stageLabel?: string;
 	title: string;
-	introduction: string;
-	icon: LucideIcon;
+	introduction?: string;
+	opening?: string;
+	icon?: LucideIcon;
 	layout?: "cards" | "sequence" | "mixed";
 	blocks: readonly ContentBlock[];
 	takeaway: string;
 };
 
-export type TimelineItem = Pick<
-	SectionData,
-	"number" | "stage" | "title"
->;
+export type TimelineItem = Pick<SectionData, "number" | "stage" | "title">;
 
 export type ClosingData = {
 	title: string;

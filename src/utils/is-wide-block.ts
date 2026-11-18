@@ -6,7 +6,11 @@ export function isWideBlock(block: ContentBlock) {
 			block.visual ||
 			block.passes ||
 			block.links ||
-			block.quote,
+			block.quote ||
+			block.groups ||
+			block.taskExamples ||
+			block.image ||
+			block.kind === "checklist",
 	);
 }
 

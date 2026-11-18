@@ -1,8 +1,5 @@
 import type { SectionProps } from "@/types/component-props";
-import {
-	getUnpairedBlockIndexes,
-	isWideBlock,
-} from "@/utils/is-wide-block";
+import { getUnpairedBlockIndexes, isWideBlock } from "@/utils/is-wide-block";
 import { accentClasses } from "@/utils/stage-classes";
 import { ContentBlock } from "./content-block";
 import { Takeaway } from "./takeaway";
@@ -16,7 +13,7 @@ export function InfographicSection({ data }: SectionProps) {
 
 	return (
 		<article
-			className="infographic-section scroll-mt-20 px-5 py-10 md:px-8 md:py-12 lg:py-14"
+			className="infographic-section scroll-mt-20 px-4 py-4"
 			id={`section-${data.number}`}
 		>
 			<header className="section-intro">
@@ -25,13 +22,15 @@ export function InfographicSection({ data }: SectionProps) {
 						{data.stageLabel}
 					</p>
 				)}
-				<Icon aria-hidden className="mb-4 size-12 stroke-1" />
+				{Icon && <Icon aria-hidden className="mb-4 size-12 stroke-1" />}
 				<h2 className="max-w-sm font-serif text-3xl leading-tight font-bold text-foreground lg:text-4xl">
 					{data.title}
 				</h2>
-				<p className="mt-4 max-w-sm text-lg leading-7 text-foreground">
-					{data.introduction}
-				</p>
+				{data.introduction && (
+					<p className="mt-4 max-w-sm text-lg leading-7 text-foreground">
+						{data.introduction}
+					</p>
+				)}
 			</header>
 
 			<div className="section-path" aria-hidden>
@@ -41,6 +40,11 @@ export function InfographicSection({ data }: SectionProps) {
 			</div>
 
 			<div className="section-content">
+				{data.opening && (
+					<p className="mb-7 max-w-3xl text-xl leading-8 text-foreground mx-auto">
+						{data.opening}
+					</p>
+				)}
 				<div
 					className={
 						data.layout !== "sequence"

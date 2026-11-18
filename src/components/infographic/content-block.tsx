@@ -1,29 +1,36 @@
-import { CircleDot, ExternalLink } from "lucide-react";
 import type { BlockProps } from "@/types/component-props";
+import { getBlockAppearance } from "@/utils/block-appearance";
+import { BlockIcon } from "./block-icon";
+import { BlockList } from "./block-list";
+import { ContentImage } from "./content-image";
 import { CurveChart } from "./curve-chart";
 import { DataTable } from "./data-table";
+import { GroupLayout } from "./group-layout";
 import { MemoryDiagram } from "./memory-diagram";
+import { ProcessRail } from "./process-rail";
+import { ResourceLinks } from "./resource-links";
+import { TaskExamples } from "./task-examples";
+import { TimeBudget } from "./time-budget";
 
 export function ContentBlock({ block, fullWidth }: BlockProps) {
-	const List = block.ordered ? "ol" : "ul";
+	const appearance = getBlockAppearance(block);
+	fullWidth = block.isFull ?? fullWidth;
 
 	return (
 		<section
-			className={`rounded-lg border border-current/15 p-4 text-lg ${
-				block.featured ? "bg-white/75" : "bg-white/45"
-			} ${fullWidth ? "lg:col-span-2" : ""}`}
+			className={`${appearance} text-lg ${fullWidth ? "lg:col-span-2" : ""}`}
 		>
-			<div className="flex gap-3">
-				<span
-					aria-hidden
-					className="mt-1 flex size-7 shrink-0 items-center justify-center rounded-full bg-foreground text-xs font-bold text-white"
+			<header className="flex items-start gap-3">
+				{block.icon !== false && <BlockIcon block={block} />}
+				<h3
+					className={`min-w-0 flex-1 font-serif text-xl font-bold text-foreground ${block.centerTitle ? "text-center" : ""}`}
 				>
-					<CircleDot className="size-4" />
-				</span>
-				<div className="min-w-0 flex-1">
-					<h3 className="font-serif text-xl font-bold text-foreground">
-						{block.title}
-					</h3>
+					{block.title}
+				</h3>
+			</header>
+			<div
+				className={`block-body min-w-0 ${block.icon === false ? "" : "block-body-indented"}`}
+			>
 					{block.paragraphs?.map((paragraph) => (
 						<p
 							className="mt-2 leading-7 text-foreground"
@@ -32,41 +39,28 @@ export function ContentBlock({ block, fullWidth }: BlockProps) {
 							{paragraph}
 						</p>
 					))}
-					{block.items && (
-						<List
-							className={`mt-3 space-y-2 pl-5 text-foreground ${
-								block.ordered ? "list-decimal" : "list-disc"
-							}`}
-						>
-							{block.items.map((item) => (
-								<li className="pl-1 leading-7" key={item}>
-									{item}
-								</li>
-							))}
-						</List>
+					{block.taskExamples && (
+						<TaskExamples examples={block.taskExamples} />
 					)}
-					{block.passes?.map((pass, passIndex) => (
-						<div className="mt-4 flex gap-3" key={pass.title}>
-							<strong className="flex size-8 shrink-0 items-center justify-center rounded-full bg-foreground text-white">
-								{passIndex + 1}
-							</strong>
-							<p className="leading-7 text-foreground">
-								<strong>{pass.title}</strong> {pass.body}
-							</p>
-						</div>
-					))}
-					{block.links?.map((link) => (
-						<p className="mt-3 text-foreground" key={link.href}>
-							<a
-								className="inline-flex items-center gap-1 font-semibold underline decoration-2 underline-offset-4"
-								href={link.href}
-							>
-								{link.label}
-								<ExternalLink aria-hidden className="size-4" />
-							</a>{" "}
-							— {link.description}
-						</p>
-					))}
+					{block.image && <ContentImage image={block.image} />}
+					<BlockList
+						items={block.items}
+						kind={block.kind}
+						ordered={block.ordered}
+					/>
+					{block.groups && (
+						<GroupLayout
+							groups={block.groups}
+							layout={block.groupLayout}
+						/>
+					)}
+					{block.passes && (
+						<ProcessRail
+							steps={block.passes}
+							style={block.stepStyle}
+						/>
+					)}
+					{block.links && <ResourceLinks links={block.links} />}
 					{block.quote && (
 						<blockquote className="mt-3 border-l-4 border-current pl-4 leading-7 text-foreground">
 							{block.quote}
@@ -78,6 +72,7 @@ export function ContentBlock({ block, fullWidth }: BlockProps) {
 							{block.visual === "memory" && (
 								<MemoryDiagram caption={block.caption} />
 							)}
+							{block.visual === "time-budget" && <TimeBudget />}
 						</div>
 					)}
 					{block.table && (
@@ -98,7 +93,6 @@ export function ContentBlock({ block, fullWidth }: BlockProps) {
 							{paragraph}
 						</p>
 					))}
-				</div>
 			</div>
 		</section>
 	);

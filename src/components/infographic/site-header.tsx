@@ -9,7 +9,7 @@ export function SiteHeader() {
 			>
 				Skip to the guide
 			</a>
-			<div className="mx-auto flex max-w-6xl items-start gap-5 border-b border-foreground/35 pb-8">
+			<div className="mx-auto flex max-w-360 items-start gap-5 border-b border-foreground/35 pb-8">
 				<BookOpen
 					aria-hidden
 					className="mt-1 hidden size-14 shrink-0 stroke-1 text-stage-1-accent sm:block"

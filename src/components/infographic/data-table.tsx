@@ -26,7 +26,7 @@ export function DataTable({ table }: TableProps) {
 						>
 							{row.map((cell, cellIndex) => (
 								<td
-									className="px-3 py-2 align-top first:font-semibold"
+									className={`px-3 py-2 align-top ${table.dontBold ? "" : "first:font-semibold"}`}
 									data-label={table.columns[cellIndex]}
 									key={cellIndex}
 								>

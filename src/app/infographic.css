@@ -3,7 +3,7 @@
 	grid-template-areas: "intro path content";
 	grid-template-columns: minmax(0, 3fr) 5rem minmax(0, 7fr);
 	margin-inline: auto;
-	max-width: 72rem;
+	max-width: 90rem;
 }
 
 .section-intro {
@@ -62,8 +62,7 @@
 }
 
 .memory-figure {
-	margin-inline: auto;
-	max-width: 20.25rem;
+	width: 100%;
 }
 
 .bg-stage-3 > .infographic-section:last-child .section-path::before {
@@ -110,19 +109,14 @@
 	}
 
 	.content-media {
-		margin-left: -2.5rem;
-		width: calc(100% + 2.5rem);
-	}
-
-	.content-media:has(.memory-figure) {
 		margin-left: 0;
 		width: auto;
 	}
 
 	.memory-figure {
-		margin-left: -2.5rem;
-		width: min(20.25rem, calc(100% + 5.25rem));
+		width: 100%;
 	}
+
 }
 
 @media (max-width: 399px) {

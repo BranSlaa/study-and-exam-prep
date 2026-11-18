@@ -4,6 +4,7 @@ import { documentTitle, site } from "@/content/site";
 import { getSiteUrl } from "@/utils/site-url";
 import "./globals.css";
 import "./infographic.css";
+import "./content-patterns.css";
 import "./timeline.css";
 import "./table.css";
 import "./memory-diagram.css";

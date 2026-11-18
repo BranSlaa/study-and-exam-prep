@@ -3,10 +3,10 @@ import type { MemoryDiagramProps } from "@/types/component-props";
 
 export function MemoryDiagram({ caption }: MemoryDiagramProps) {
 	return (
-		<figure className="memory-figure overflow-hidden rounded-md bg-white">
+		<figure className="memory-figure">
 			<div
 				aria-label="A modified three-stage information-processing model of memory"
-				className="memory-model"
+				className="memory-model rounded-md bg-white"
 				role="img"
 			>
 				<div className="memory-main">
@@ -55,7 +55,7 @@ export function MemoryDiagram({ caption }: MemoryDiagramProps) {
 				</div>
 			</div>
 			{caption && (
-				<figcaption className="border-t border-foreground/15 p-4 text-base leading-6 text-foreground">
+				<figcaption className="mt-3 rounded-md bg-white/65 p-4 text-base leading-6 text-foreground">
 					{caption}
 				</figcaption>
 			)}
