@@ -72,12 +72,16 @@ export function ContentBlock({ block, fullWidth }: BlockProps) {
 							{block.quote}
 						</blockquote>
 					)}
-					{block.visual === "curve" && <CurveChart />}
-					{block.visual === "memory" && (
-						<MemoryDiagram caption={block.caption} />
+					{block.visual && (
+						<div className="content-media mt-4">
+							{block.visual === "curve" && <CurveChart />}
+							{block.visual === "memory" && (
+								<MemoryDiagram caption={block.caption} />
+							)}
+						</div>
 					)}
 					{block.table && (
-						<div className="mt-4">
+						<div className="content-media mt-4">
 							<DataTable table={block.table} />
 						</div>
 					)}

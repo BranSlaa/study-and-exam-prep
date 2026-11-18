@@ -32,3 +32,10 @@
 		font-weight: 700;
 	}
 }
+
+@media (max-width: 399px) {
+	.responsive-table td {
+		gap: 0.25rem;
+		grid-template-columns: 1fr;
+	}
+}

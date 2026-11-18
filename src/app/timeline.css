@@ -114,6 +114,14 @@
 	}
 }
 
+@media (max-width: 359px) {
+	.timeline-marker {
+		font-size: 0.625rem;
+		height: 1.75rem;
+		width: 1.75rem;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.timeline-marker,
 	.timeline-marker::before {

@@ -1,5 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Libre_Baskerville } from "next/font/google";
+import { documentTitle, site } from "@/content/site";
+import { getSiteUrl } from "@/utils/site-url";
 import "./globals.css";
 import "./infographic.css";
 import "./timeline.css";
@@ -19,9 +21,33 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export const metadata: Metadata = {
-	title: "Studying & Exam Preparation",
-	description:
-		"An introductory psychology guide to studying and exam preparation.",
+	metadataBase: new URL(getSiteUrl()),
+	title: {
+		default: documentTitle,
+		template: `%s | ${site.name}`,
+	},
+	description: site.description,
+	applicationName: site.name,
+	category: "education",
+	alternates: { canonical: "/" },
+	openGraph: {
+		type: "website",
+		locale: "en_CA",
+		url: "/",
+		siteName: site.name,
+		title: documentTitle,
+		description: site.description,
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: documentTitle,
+		description: site.description,
+	},
+	robots: { index: true, follow: true },
+};
+
+export const viewport: Viewport = {
+	themeColor: "hsl(168 28% 97%)",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

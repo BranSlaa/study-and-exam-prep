@@ -3,6 +3,12 @@ import { BookOpen } from "lucide-react";
 export function SiteHeader() {
 	return (
 		<header className="bg-background px-5 py-10 md:px-8 lg:py-14">
+			<a
+				className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:rounded-md focus:bg-foreground focus:px-3 focus:py-2 focus:text-white"
+				href="#section-01"
+			>
+				Skip to the guide
+			</a>
 			<div className="mx-auto flex max-w-6xl items-start gap-5 border-b border-foreground/35 pb-8">
 				<BookOpen
 					aria-hidden

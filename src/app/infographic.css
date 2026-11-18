@@ -61,6 +61,11 @@
 	min-width: 0;
 }
 
+.memory-figure {
+	margin-inline: auto;
+	max-width: 20.25rem;
+}
+
 .bg-stage-3 > .infographic-section:last-child .section-path::before {
 	bottom: 0;
 }
@@ -71,12 +76,22 @@
 		grid-template-areas:
 			"path intro"
 			"path content";
-		grid-template-columns: 2.75rem minmax(0, 1fr);
+		grid-template-columns: 3rem minmax(0, 1fr);
+		padding-inline: 0.5rem;
 		row-gap: 2rem;
 	}
 
 	.section-intro {
 		padding-right: 0;
+	}
+
+	.section-kicker {
+		align-items: center;
+		display: flex;
+		letter-spacing: 0.08em;
+		line-height: 1.2;
+		margin-bottom: 1.25rem;
+		min-height: 3rem;
 	}
 
 	.section-path::before {
@@ -85,11 +100,38 @@
 	}
 
 	.section-path::after {
-		left: 50%;
-		right: -1rem;
+		left: calc(50% + 1.5rem);
+		right: auto;
+		width: 0.7rem;
 	}
 
 	.section-marker {
 		left: 50%;
+	}
+
+	.content-media {
+		margin-left: -2.5rem;
+		width: calc(100% + 2.5rem);
+	}
+
+	.content-media:has(.memory-figure) {
+		margin-left: 0;
+		width: auto;
+	}
+
+	.memory-figure {
+		margin-left: -2.5rem;
+		width: min(20.25rem, calc(100% + 5.25rem));
+	}
+}
+
+@media (max-width: 399px) {
+	.infographic-section {
+		column-gap: 0.85rem;
+		padding-inline: 0.5rem;
+	}
+
+	.section-path::after {
+		width: 0.5rem;
 	}
 }

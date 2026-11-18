@@ -21,7 +21,7 @@ export function InfographicSection({ data }: SectionProps) {
 		>
 			<header className="section-intro">
 				{data.stageLabel && (
-					<p className="mb-6 text-sm font-bold tracking-widest uppercase">
+					<p className="section-kicker mb-6 text-sm font-bold tracking-widest uppercase">
 						{data.stageLabel}
 					</p>
 				)}

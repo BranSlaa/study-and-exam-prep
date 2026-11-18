@@ -26,7 +26,12 @@ export type TableProps = {
 
 export type StageProps = {
 	id: StageId;
+	label: string;
 	children: React.ReactNode;
+};
+
+export type SiteJsonLdProps = {
+	sections: readonly Pick<SectionData, "number" | "title">[];
 };
 
 export type TakeawayProps = {

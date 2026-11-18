@@ -3,7 +3,7 @@ import type { MemoryDiagramProps } from "@/types/component-props";
 
 export function MemoryDiagram({ caption }: MemoryDiagramProps) {
 	return (
-		<figure className="mt-4 overflow-hidden rounded-md bg-white">
+		<figure className="memory-figure overflow-hidden rounded-md bg-white">
 			<div
 				aria-label="A modified three-stage information-processing model of memory"
 				className="memory-model"
@@ -28,7 +28,9 @@ export function MemoryDiagram({ caption }: MemoryDiagramProps) {
 							<RotateCw aria-hidden />
 							Rehearsal and active maintenance
 						</span>
-						Working/short-term memory
+						Working/
+						<wbr />
+						short-term memory
 					</div>
 					<div className="memory-retrieval">
 						<span>
@@ -43,12 +45,12 @@ export function MemoryDiagram({ caption }: MemoryDiagramProps) {
 					</div>
 				</div>
 				<div className="memory-automatic relative">
-					<div className="[writing-mode:vertical-lr] absolute right-2 top-1/2 -translate-y-1/2 w-fit text-nowrap">
+					<div className="memory-automatic-label">
 						Automatic processing
 					</div>
 					<ArrowLeft
 						aria-hidden
-						className="absolute left-0 bottom-0 translate-x-2 -translate-y-6"
+						className="absolute left-0 bottom-0 translate-x-2 -translate-y-4"
 					/>
 				</div>
 			</div>
