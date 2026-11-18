@@ -179,7 +179,7 @@
 	.task-branches::before {
 		border: 0;
 		border-left: 1px solid currentColor;
-		bottom: 50%;
+		bottom: 0;
 		height: auto;
 		left: 0.5rem;
 		right: auto;

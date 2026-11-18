@@ -33,7 +33,7 @@ export const section02 = {
 			],
 			visual: "memory",
 			caption:
-				"FIGURE 24.4 A modified three-stage information-processing model of memory Atkinson and Shiffrin’s classic three-stage model helps us to think about how memories are processed, but researchers now recognize other ways that long-term memories form. For example, some information slips into long-term memory via a “back door,” without our consciously attending to it (automatic processing). And so much active processing occurs in the short-term memory stage that we now call it working memory.",
+				"FIGURE 24.4 A modified three-stage information-processing model of memory Atkinson and Shiffrin's classic three-stage model helps us to think about how memories are processed, but researchers now recognize other ways that long-term memories form. For example, some information slips into long-term memory via a “back door,” without our consciously attending to it (automatic processing). And so much active processing occurs in the short-term memory stage that we now call it working memory. (Myers, D. G., & DeWall, C. N. (2021). Psychology (13th ed.). Worth Publishers.)",
 			isFull: true,
 			icon: false,
 		},
