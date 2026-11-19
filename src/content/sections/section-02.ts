@@ -38,6 +38,12 @@ export const section02 = {
 			icon: false,
 		},
 		{
+			title: "Attention as a practical prerequisite",
+			paragraphs: [
+				"Give the material your attention. Silence unnecessary notifications, put unrelated tabs away, and choose one task for the study block. When your attention drifts, pause and explain the last idea before continuing.",
+			],
+		},
+		{
 			title: "Recognition versus recall",
 			kind: "reference",
 			table: {

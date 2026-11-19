@@ -25,7 +25,7 @@ export const section03 = {
 			groups: [
 				{
 					title: "Cramming",
-					body: "Concentrates studying into one period. Information is learned quickly but forgotten quickly.",
+					body: "Concentrates studying into one period. Information is learned quickly but forgotten quickly. Cramming may support immediate performance, but spaced practice generally supports better long-term retention.",
 				},
 				{
 					title: "Spaced practice",

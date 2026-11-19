@@ -5,7 +5,8 @@ export const section10 = {
 	number: "10",
 	stage: "three",
 	title: "Handle the exam strategically",
-	introduction: "Use your time deliberately and keep moving through the task.",
+	introduction:
+		"Use your time deliberately and keep moving through the task.",
 	icon: Clock3,
 	layout: "sequence",
 	blocks: [
@@ -34,9 +35,31 @@ export const section10 = {
 					body: "Check for missed questions, incomplete responses, misread wording, and answer-entry mistakes. Change an answer when you have a reason.",
 				},
 			],
-			visual: "time-budget",
 			icon: false,
 		},
+		{
+			title: "Responding to instruction words",
+			table: {
+				label: "Responding to instruction words",
+				columns: ["Instruction word", "Response"],
+				rows: [
+					["Define", "Give meaning to the term."],
+					["Explain", "Show how or why."],
+					["Compare", "Address similarities and differences."],
+					["Apply", "Connect the concept to the scenario."],
+					["Answer", "Answer every part of the question."],
+				],
+			},
+		},
+		{
+			title: "Example: time allocation",
+			kind: "example",
+			paragraphs: [
+				"In a 100-minute exam, reserving 10 minutes for instructions and review leaves 90 minutes of working time. A section worth 30% of the marks would receive approximately 27 minutes.",
+			],
+			visual: "time-budget",
+		},
 	],
-	takeaway: "Match your time to the task, and do not let one question take over the exam.",
+	takeaway:
+		"Match your time to the task, and do not let one question take over the exam.",
 } satisfies SectionData;

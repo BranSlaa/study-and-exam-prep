@@ -21,6 +21,29 @@ export const section09 = {
 			isFull: true,
 		},
 		{
+			title: "The day of",
+			kind: "checklist",
+			items: [
+				"Eat a good breakfast.",
+				"Review key information from your study materials.",
+				"Take a deep breath and relax.",
+				"Arrive early to avoid stress.",
+				"Use the bathroom before the exam starts.",
+			],
+			isFull: true,
+		},
+		{
+			title: "What to bring",
+			kind: "checklist",
+			items: [
+				"Permitted pens, pencils, calculators, or other materials.",
+				"Identification and personal belongings.",
+				"A watch or timer to manage your time.",
+				"A dictionary, thesaurus, or electronic device if allowed.",
+			],
+			isFull: true,
+		},
+		{
 			title: "Prepare for your exam format",
 			kind: "example",
 			groupLayout: "branch",

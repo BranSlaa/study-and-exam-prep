@@ -1,6 +1,8 @@
 import { Wrench } from "lucide-react";
 import mindMap from "../../../public/images/Learning mind map_ conditioning-3.png";
 import applicationFlashcard from "../../../public/images/Psychology flashcards explain negative reinforcement-2.png";
+import chatGPT from "../../../public/images/chatgpt study mode.png";
+import googleGemini from "../../../public/images/google gemini quiz.png";
 import type { SectionData } from "@/types/content";
 
 export const section06 = {
@@ -85,12 +87,24 @@ export const section06 = {
 					href: "https://chatgpt.com/",
 					description:
 						"Has a study mode option that requires you to answer the question first before it will give you its response.",
+					image: {
+						src: chatGPT,
+						alt: "ChatGPT with a study mode option that requires you to answer the question first before it will give you its response.",
+						caption:
+							"Answer the question first, then ask ChatGPT to explain the answer using the notes.",
+					},
 				},
 				{
 					label: "Google Gemini",
 					href: "https://gemini.google.com/",
 					description:
 						"Ask it to create an interactive quiz and it can make a 10 question MCQ",
+					image: {
+						src: googleGemini,
+						alt: "Google Gemini with a quiz creation option that allows you to create a 10 question MCQ.",
+						caption:
+							"Ask Google Gemini to create an interactive quiz and it can make a 10 question MCQ.",
+					},
 				},
 			],
 		},

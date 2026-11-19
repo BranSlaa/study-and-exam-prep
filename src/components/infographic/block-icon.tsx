@@ -37,7 +37,7 @@ export function BlockIcon({ block }: BlockIconProps) {
 	return (
 		<span
 			aria-hidden
-			className="mt-1 flex size-7 shrink-0 items-center justify-center rounded-md bg-foreground text-white"
+			className="flex size-7 shrink-0 items-center justify-center rounded-md bg-foreground text-white"
 		>
 			<Icon className="size-4" />
 		</span>

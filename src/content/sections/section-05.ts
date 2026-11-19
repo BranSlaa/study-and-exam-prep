@@ -39,6 +39,12 @@ export const section05 = {
 			icon: false,
 		},
 		{
+			title: "What to do when you cannot retrieve anything",
+			paragraphs: [
+				"If you cannot get started, review a small section or use a brief cue. Close the material and try again. Retrieval practice should include checking and correcting—not repeatedly guessing without feedback.",
+			],
+		},
+		{
 			title: "Example: brain dump, check, correct",
 			kind: "example",
 			image: {

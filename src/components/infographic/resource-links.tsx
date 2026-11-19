@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 import type { ResourceLink } from "@/types/content";
 
 type ResourceLinksProps = {
@@ -23,6 +24,22 @@ export function ResourceLinks({ links }: ResourceLinksProps) {
 						<ExternalLink aria-hidden className="size-4" />
 					</a>
 					<p className="mt-1 text-base leading-6">{link.description}</p>
+					{link.image && (
+						<figure className="mt-4">
+							<Image
+								alt={link.image.alt}
+								className="h-auto w-full rounded-md border border-foreground/15"
+								placeholder="blur"
+								sizes="(max-width: 639px) 100vw, 33vw"
+								src={link.image.src}
+							/>
+							{link.image.caption && (
+								<figcaption className="mt-2 text-sm leading-5 text-foreground/70">
+									{link.image.caption}
+								</figcaption>
+							)}
+						</figure>
+					)}
 				</li>
 			))}
 		</ul>

@@ -20,7 +20,7 @@ export function ContentBlock({ block, fullWidth }: BlockProps) {
 		<section
 			className={`${appearance} text-lg ${fullWidth ? "lg:col-span-2" : ""}`}
 		>
-			<header className="flex items-start gap-3">
+			<header className="flex min-h-8 items-center gap-3">
 				{block.icon !== false && <BlockIcon block={block} />}
 				<h3
 					className={`min-w-0 flex-1 font-serif text-xl font-bold text-foreground ${block.centerTitle ? "text-center" : ""}`}

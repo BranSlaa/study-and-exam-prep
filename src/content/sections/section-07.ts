@@ -72,6 +72,18 @@ export const section07 = {
 			isFull: true,
 			icon: false,
 		},
+		{
+			title: "How to decide whether you know a topic",
+			paragraphs: [
+				"Check your understanding after a short delay. Can you explain the idea without notes, give a new example, and distinguish it from a similar concept? Don't rely on your confidence, use your answers to decide what needs more work.",
+			],
+		},
+		{
+			title: "A short practice exam",
+			paragraphs: [
+				"Before exam day, complete a short mixed practice set under similar conditions: use the expected question formats, permitted materials, and a realistic time limit. Review both your answers and your pacing afterward to ensure you are on track.",
+			],
+		},
 	],
 	takeaway: "Schedule an action you can finish and check.",
 } satisfies SectionData;

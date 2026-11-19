@@ -19,6 +19,7 @@ export type ResourceLink = {
 	label: string;
 	href: string;
 	description: string;
+	image?: ContentImage;
 };
 
 export type TaskExample = {
