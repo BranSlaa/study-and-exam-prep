@@ -103,7 +103,7 @@ export const section06 = {
 						src: googleGemini,
 						alt: "Google Gemini with a quiz creation option that allows you to create a 10 question MCQ.",
 						caption:
-							"Ask Google Gemini to create an interactive quiz and it can make a 10 question MCQ.",
+							"Quiz options exist for difficulty levels and number of questions, but past experience has shown that the 10 question MCQ is the most reliable.",
 					},
 				},
 			],
